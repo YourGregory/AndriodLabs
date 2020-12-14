@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/clickMe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="100dp"
+            android:text="Click me"
+            android:textAlignment="center"
+            android:textSize="36sp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:background="#FF888888"
+            android:onClick="showPreviousActivity"
+            android:layout_marginTop="100dp"
+            android:text="Switch to previous Activity"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentBottom="false"
+            android:background="#FF888888"
+            android:onClick="showNextActivity"
+            android:layout_marginTop="100dp"
+            android:text="Switch to next Activity"
+            android:textColor="#FFFFFF" />
+
+        <RadioGroup
+            android:layout_width="398dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="140dp"
+            android:layout_gravity="center_vertical">
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="411dp"
+                android:layout_height="48dp"
+                android:checked="true"
+                android:text="Click me!"
+                android:textAlignment="center" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="411dp"
+                android:layout_height="48dp"
+                android:text="No, Click me!"
+                android:textAlignment="center" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
