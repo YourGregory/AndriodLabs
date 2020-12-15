@@ -35,7 +35,7 @@
                 android:layout_margin="20dp"
                 android:accessibilityHeading="false"
                 android:inputType="number"
-                android:text="ENTER AMOUNT"
+                android:text="Enter amount you want to convert"
                 android:textAlignment="center"
                 android:textIsSelectable="false"
                 android:textSize="15dp" />
@@ -53,7 +53,7 @@
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:text="From Currency:"
+                android:text="From:"
                 android:textSize="15dp" />
 
             <Spinner
@@ -67,7 +67,7 @@
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:text="To Currency:"
+                android:text="To:"
                 android:textSize="15dp" />
 
             <Spinner
@@ -87,6 +87,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
+            android:onClick="convert"
             android:text="Convert"
             android:textColor="#FFFFFF"
             app:rippleColor="#000000" />
