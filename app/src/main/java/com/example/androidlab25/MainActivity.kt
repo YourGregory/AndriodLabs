@@ -10,6 +10,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.ui.AppBarConfiguration
 import timber.log.Timber
+import kotlin.math.roundToInt
 
 const val KEY_REVENUE = "key_revenue"
 
@@ -19,12 +20,14 @@ class MainActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var appBarConfiguration : AppBarConfiguration
     private  lateinit var lifeCycleTimer: LifeCycleTimer
+    private lateinit var inFocusTimer: InFocusTimer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Timber.i("onCreate called")
         lifeCycleTimer = LifeCycleTimer(this.lifecycle)
+        inFocusTimer = InFocusTimer(this.lifecycle)
         if (savedInstanceState != null) {
             revenue = savedInstanceState.getInt(KEY_REVENUE)
         }
@@ -99,8 +102,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onDestroy() {
+        val inFocusSeconds = inFocusTimer.secondsCount
+        val generalSeconds = lifeCycleTimer.secondsCount
+        val appWasInFocus = (inFocusSeconds.toDouble() / generalSeconds.toDouble()) * 100
+        appWasInFocus.roundToInt()
+        Timber.i("$appWasInFocus% - App was in focus")
         super.onDestroy()
-        Timber.i("onDestroy Called")
+        Timber.i("onDestroy called")
     }
 
     override fun onRestart() {
