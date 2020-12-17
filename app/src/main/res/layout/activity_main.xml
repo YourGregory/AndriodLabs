@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/main_fragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,16 +18,20 @@
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:onClick="showSecondActivity"
-            android:text="Show Second Activity" />
+            android:layout_height="wrap_content"
+            android:text="Show Second fragment"
+            />
 
         <fragment
-            android:name="com.example.androidlab25.BlankFragment1"
             android:id="@+id/fr_place"
+            android:name="com.example.androidlab25.BlankFragment1"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         </fragment>
+        <fragment
+            android:id="@+id/fr_place2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.example.androidlab25.AboutFragment"/>
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

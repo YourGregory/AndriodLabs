@@ -3,12 +3,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AboutFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    android:textAlignment="center"
+    tools:context=".AboutFragment"
+    android:clickable="true">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hello there!"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="It's a simple currency converter with 10 currencies. You can  use it if you need tou know rate type of your currency relatively to other. In future, we hope to add new curencies. If you like this app, you can support me on OshadBank"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/cardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:linksClickable="false"
+            android:longClickable="true"
+            android:text="5167 4901 5490 3281"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Developer: George Nikitin"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Version: 1.2 Beta"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contacts-"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/mailAdress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" yurinikitin45@gmail.com"
+            android:textSize="36sp" />
+    </LinearLayout>
 
 </FrameLayout>
