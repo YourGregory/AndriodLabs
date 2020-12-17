@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TermsFragment"
+    tools:context="com.example.androidlab25.terms.TermsFragment"
     android:id="@+id/fragment_terms">
 
     <!-- TODO: Update blank fragment layout -->

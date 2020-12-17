@@ -1,5 +1,6 @@
 package com.example.androidlab25
 
+import com.example.androidlab25.about.AboutFragment
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,8 +10,9 @@ import android.view.View
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.ui.AppBarConfiguration
+import mainLogic.BlankFragment1
+import com.example.androidlab25.terms.TermsFragment
 import timber.log.Timber
-import kotlin.math.roundToInt
 
 const val KEY_REVENUE = "key_revenue"
 
@@ -105,7 +107,6 @@ class MainActivity : AppCompatActivity() {
         val inFocusSeconds = inFocusTimer.secondsCount
         val generalSeconds = lifeCycleTimer.secondsCount
         val appWasInFocus = (inFocusSeconds.toDouble() / generalSeconds.toDouble()) * 100
-        appWasInFocus.roundToInt()
         Timber.i("$appWasInFocus% - App was in focus")
         super.onDestroy()
         Timber.i("onDestroy called")

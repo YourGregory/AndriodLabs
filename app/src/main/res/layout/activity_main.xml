@@ -17,7 +17,7 @@
 
         <fragment
             android:id="@+id/fr_place"
-            android:name="com.example.androidlab25.BlankFragment1"
+            android:name="mainLogic.BlankFragment1"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         </fragment>
@@ -25,6 +25,6 @@
             android:id="@+id/fr_place2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:name="com.example.androidlab25.AboutFragment"/>
+            android:name="com.example.androidlab25.about.AboutFragment"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
